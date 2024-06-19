@@ -3,6 +3,16 @@ import pandas as pd
 import numpy as np
 import pickle
 
+
+
+# Add custom CSS to hide the GitHub icon
+hide_github_icon = """
+#GithubIcon {
+  visibility: hidden;
+}
+"""
+st.markdown(hide_github_icon, unsafe_allow_html=True)
+
 # Load the model and encoders
 with open('model.pkl', 'rb') as f:
     model = pickle.load(f)
